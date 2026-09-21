@@ -56,4 +56,5 @@ public class CalculatorTest {private final Calculator calculator = new Calculato
         assertEquals(expected, actual,
                 () -> a + " * " + b + " phải bằng " + expected);
     }
+
     }
