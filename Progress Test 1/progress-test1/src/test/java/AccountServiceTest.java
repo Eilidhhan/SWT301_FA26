@@ -478,5 +478,6 @@ class AccountServiceTest {
         void resetPassword_UnknownToken_ReturnsInvalidToken() {
             assertEquals(ResultCode.INVALID_TOKEN, service.resetPassword("not-a-token", "NewPass@1", "NewPass@1"));
         }
+        
     }
 }
