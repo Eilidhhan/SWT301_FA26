@@ -67,6 +67,13 @@ public class AccountService {
         usernameByEmail.put(emailKey, userKey);
         return ResultCode.SUCCESS;
     }
+    public Optional<Account> findByUsername(String username) {
+        if (isBlank(username)) {
+            return Optional.empty();
+        }
+        return Optional.ofNullable(accountsByUsername.get(key(username)));
+    }
+
     public AccountService() { /* TODO: khởi tạo các Map */ }
     public ResultCode unlockAccount(String username) { throw new UnsupportedOperationException("TODO"); }
     // ... register, login, changePassword, requestPasswordReset, resetPassword,
