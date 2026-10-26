@@ -25,7 +25,7 @@ public class LoginTest extends BaseTest {
         loginPage.navigate();
         loginPage.login("tomsmith", "SuperSecretPassword!");
         assertTrue(loginPage.getMessageText(loginPage.getSuccessLocator())
-                .contains("You logged into a secure area!"));
+                .contains("Chuỗi sai cố ý để kích hoạt chụp ảnh"));
     }
 
     @Test
